@@ -1,7 +1,6 @@
-import { propiedades_alquiler, propiedades_ventas } from "./data.js";
+import { propiedades_ventas } from "./data.js";
 
 function renderizarPropiedades (propiedades, contenedorId, limite){
-
     const contenedor = document.getElementById(contenedorId)
 
     let contenidoHTML = "";
@@ -45,20 +44,11 @@ function renderizarPropiedades (propiedades, contenedorId, limite){
 }
 window.onload = () =>{
     renderizarPropiedades(propiedades_ventas,"propiedades-ventas-container", 3)
-    renderizarPropiedades(propiedades_alquiler,"propiedades-alquiler-container", 3)
 
     document.getElementById("btn-venta-header").addEventListener("click", () =>{
-      window.location.href  = "propiedades_venta.html";
+        window.location.href  = "propiedades_venta.html";
     });
-  
     document.getElementById("btn-alquiler-header").addEventListener("click", () =>{
-      window.location.href  = "propiedades_alquiler.html";
-    });
-    document.getElementById("btn-venta").addEventListener("click", () =>{
-      window.location.href  = "propiedades_venta.html";
-    });
-  
-    document.getElementById("btn-alquiler").addEventListener("click", () =>{
-      window.location.href  = "propiedades_alquiler.html";
+        window.location.href  = "propiedades_alquiler.html";
     });
 }
